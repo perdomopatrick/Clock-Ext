@@ -31,4 +31,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         // chrome.tabs.create({ url: url });
     });
+
+    const body = document.body;
+    body.addEventListener("wheel", (event) => {
+        // body.style.backgroundColor = "red";
+        if (event.deltaY > 0) {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    clock.style.fontSize = `${Math.max(15, parseFloat(clock.style.fontSize || 30) - 1)}px`;
+                }, i * 20);
+            }
+        } else if (event.deltaY < 0) {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    clock.style.fontSize = `${Math.min(150, parseFloat(clock.style.fontSize || 30) + 1)}px`;
+                }, i * 20);
+            }
+        }
+    });
 });

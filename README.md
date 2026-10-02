@@ -1,6 +1,6 @@
 # Clock
 
-A nice clock.
+A nice clock. (can change size by pinch/wheel input)
 
 Also importantly, it opens canvas slides with one click.
 
